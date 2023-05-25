@@ -1,0 +1,92 @@
+<!doctype html>
+    <html lang="pt-br">
+        <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <!-- Font Awesome Icons  -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+                integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+                crossorigin="anonymous" />
+            <!-- CSS -->
+            <link rel="stylesheet" href="css/style.css">
+            <title>Gerador automatico de memes</title>
+        </head>
+        <body>
+            <!-- Further code here -->
+            <div class="header">
+                <h4>Gere Seu meme</h4>
+
+                <div>
+                    <button id="export">CRIAR</button>
+                </div>
+
+            </div>
+            <div class="container">
+                <div>
+                    <div id="canvasWrapper">
+                    </div>
+                </div>
+
+                <div class="memeForm">
+                    <h5>Selecione a imagem</h5>
+                    <div class="box">
+                        <div>
+                            <p>Link para a imagem</p>
+                            <div class="text_input">
+                                <input id="imgURL" class="input" type="text" placeholder="Link da imagem" />
+                            </div>
+                        </div>
+                        <div>
+                            <p>Ou faça o upload da imagem do seu dispositivo</p>
+                            <input id="imgFile" type="file" accept="image/*" />
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 50px;">Texto do MeMe</h4>
+                    <div class="box">
+                        <div>
+                            <p>Texto Superior</p>
+                            <div class="text_input">
+                                <input id="textTop" type="text" class="input" placeholder="Texto superios" />
+                            </div>
+                        </div>
+                        <div>
+                            <p>Texto Inferior</p>
+                            <div class="text_input">
+                                <input id="textBottom" type="text" class="input" placeholder="Texto inferior" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Selecione o tamanho das letras</h4>
+                    <div class="box">
+                        <div>
+                            <p>Texto Superios: <span id="textSizeTopOut">10</span></p>
+                            <div class="sliderContainer">
+                                <input id="textSizeTop" type="range" min="2" max="50" step="2" />
+                            </div>
+                        </div>
+                        <div>
+                            <p>Texto Inferios: <span id="textSizeBottomOut">10</span></p>
+                            <div class="sliderContainer">
+                                <input id="textSizeBottom" type="range" min="2" max="50" step="2" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div>
+                            <h4>Preview do tamanho</h4>
+                            <input id="trueSize" type="checkbox" />
+                            <label for="trueSize"><span>Mostrar o preview</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="js/script.js"></script>
+        </body>
+    </html>
